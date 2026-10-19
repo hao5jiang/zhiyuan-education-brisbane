@@ -25,6 +25,7 @@ assert.doesNotMatch(page, /partnering with Mansfield|in partnership with Mansfie
 assert.match(page, /rented facilities at Mansfield State High School/);
 assert.match(portal, /\.\/app\.js/);
 assert.match(enrol, /\.\/enrol\.js/);
+assert.match(enrol, /src="\.\/enrol\.js\?v=2"/);
 assert.match(enrol, /\.\.\/images\/logo\.jpg/);
 assert.match(enrol, /Demonstration only/);
 assert.doesNotMatch(enrol, /<input[^>]+(?:name|email|tel|file)|<textarea/i);
