@@ -1,2 +1,7 @@
 site-package.tar.gz
 .DS_Store
+node_modules/
+.wrangler/
+.wrangler-config/
+.dev.vars*
+!.dev.vars.example

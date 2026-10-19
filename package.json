@@ -1,0 +1,16 @@
+{
+  "name": "zhiyuan-education-brisbane",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static bilingual website and fictional student portal demonstration",
+  "scripts": {
+    "check": "node scripts/check-static.mjs",
+    "dev": "wrangler dev --local --port 8787",
+    "dev:pages": "node scripts/serve-prefix.mjs",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler preview"
+  },
+  "devDependencies": {
+    "wrangler": "4.151.1"
+  }
+}
