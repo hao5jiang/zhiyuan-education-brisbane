@@ -13,9 +13,10 @@ const wrangler = JSON.parse(read('wrangler.jsonc'));
 const pkg = JSON.parse(read('package.json'));
 
 assert.match(page, /href="student\/"/);
-assert.match(page, /href="enrol\/"/);
-assert.match(page, /class="enrol-link" href="enrol\/"/);
-assert.match(page, /class="hero-actions"><a class="btn" href="enrol\/"/);
+assert.match(page, /href="enrol\/\?v=2"/);
+assert.match(page, /class="enrol-link" href="enrol\/\?v=2"/);
+assert.match(page, /class="hero-actions"><a class="btn" href="enrol\/\?v=2"/);
+assert.match(page, /enrol\/\?lang=zh&v=2/);
 assert.match(page, /Application preview only · no details are sent and no place is reserved/);
 assert.match(page, /data-enrol-link/);
 assert.ok(page.indexOf('id="enrolment"') > page.indexOf('id="learning"'));
