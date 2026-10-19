@@ -45,3 +45,7 @@ languageButton.addEventListener('click', () => {
   languageButton.textContent = language === 'en' ? '中文' : 'English';
   renderResult();
 });
+
+if (new URLSearchParams(location.search).get('lang') === 'zh') {
+  languageButton.click();
+}

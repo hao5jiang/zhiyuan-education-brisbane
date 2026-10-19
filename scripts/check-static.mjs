@@ -14,6 +14,12 @@ const pkg = JSON.parse(read('package.json'));
 
 assert.match(page, /href="student\/"/);
 assert.match(page, /href="enrol\/"/);
+assert.match(page, /class="enrol-link" href="enrol\/"/);
+assert.match(page, /class="hero-actions"><a class="btn" href="enrol\/"/);
+assert.match(page, /Application preview only · no details are sent and no place is reserved/);
+assert.match(page, /data-enrol-link/);
+assert.ok(page.indexOf('id="enrolment"') > page.indexOf('id="learning"'));
+assert.ok(page.indexOf('id="enrolment"') < page.indexOf('id="approach"'));
 assert.match(page, /data-en="Student Portal" data-zh="学生中心"/);
 assert.doesNotMatch(page, /partnering with Mansfield|in partnership with Mansfield|与 Mansfield State High School 合作/);
 assert.match(page, /rented facilities at Mansfield State High School/);
@@ -37,6 +43,7 @@ for (const path of ['dist/404.html','dist/student/app.js','dist/student/data-sou
 }
 
 const dataModule = read('dist/student/data-source.js');
+assert.match(enrolScript, /URLSearchParams\(location\.search\)/);
 assert.doesNotMatch(dataModule, /\bfetch\s*\(|\bXMLHttpRequest\b|\blocalStorage\b|\bsessionStorage\b/);
 assert.doesNotMatch(portal, /type="file"/);
 console.log('Static source checks passed.');
