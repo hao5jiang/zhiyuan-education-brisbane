@@ -21,7 +21,10 @@ assert.match(page, /Application preview only · no details are sent and no place
 assert.match(page, /data-enrol-link/);
 assert.ok(page.indexOf('id="enrolment"') > page.indexOf('id="learning"'));
 assert.ok(page.indexOf('id="enrolment"') < page.indexOf('id="approach"'));
-assert.match(page, /data-en="Student Portal" data-zh="学生中心"/);
+assert.match(page, /data-en="Student demo" data-zh="学生演示"/);
+assert.match(page, /class="footer-grid"/);
+assert.match(page, /data-en="Student portal demo" data-zh="学生系统演示"/);
+assert.match(page, /Classes in rented rooms at Mansfield State High School/);
 assert.doesNotMatch(page, /partnering with Mansfield|in partnership with Mansfield|与 Mansfield State High School 合作/);
 assert.match(page, /rented facilities at Mansfield State High School/);
 assert.match(portal, /\.\/app\.js/);
