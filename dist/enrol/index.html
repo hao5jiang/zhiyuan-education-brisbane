@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Preview a Queensland mathematics class application with Zhiyuan Education in Brisbane. Demo only; no details are sent.">
+  <title>Enrolment enquiry preview | Zhiyuan Education</title>
+  <link rel="stylesheet" href="./enrol.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="../"><img src="../images/logo.jpg" alt="Zhiyuan Education logo"><span>ZHIYUAN EDUCATION<small>AUSTRALIA · 致远教育</small></span></a>
+      <div class="nav-actions"><a href="../" data-en="Home" data-zh="首页">Home</a><a href="../student/" data-en="Student Portal" data-zh="学生中心">Student Portal</a><button id="language" type="button" aria-label="Switch language">中文</button></div>
+    </div>
+  </header>
+  <main>
+    <section class="intro wrap">
+      <div class="eyebrow" data-en="Brisbane · Queensland mathematics" data-zh="布里斯班 · 昆州数学">Brisbane · Queensland mathematics</div>
+      <h1 data-en="Start with the right class." data-zh="从适合的课程开始。">Start with the right class.</h1>
+      <p data-en="Explore an enrolment enquiry for Zhiyuan Education classes held in rented facilities at Mansfield State High School. Choose a class and learning focus to preview your request." data-zh="致远教育租用 Mansfield State High School 的场地上课。选择课程和学习方向，预览报名申请内容。">Explore an enrolment enquiry for Zhiyuan Education classes held in rented facilities at Mansfield State High School. Choose a class and learning focus to preview your request.</p>
+      <div class="notice" role="note" data-en="Demonstration only. This page does not collect names or contact details, submit an application, or reserve a place." data-zh="此页面仅供演示：不收集姓名或联系方式，不提交报名申请，也不预留名额。">Demonstration only. This page does not collect names or contact details, submit an application, or reserve a place.</div>
+    </section>
+    <section class="form-section wrap" aria-labelledby="form-heading">
+      <div class="form-card">
+        <div class="eyebrow" data-en="Application preview" data-zh="报名申请预览">Application preview</div>
+        <h2 id="form-heading" data-en="Tell us what you would study" data-zh="选择想了解的课程">Tell us what you would study</h2>
+        <form id="enrol-form">
+          <label for="class-choice" data-en="Class of interest" data-zh="意向课程">Class of interest</label>
+          <select id="class-choice" required>
+            <option value="" data-en="Select a class" data-zh="请选择课程">Select a class</option>
+            <option value="y8">Year 8</option><option value="y9">Year 9</option><option value="y10ib">Year 10 IB</option>
+            <option value="y10methods">Year 10 Methods</option><option value="y10specialist">Year 10 Specialist</option>
+            <option value="y11methods">Year 11 Methods</option><option value="y11specialist">Year 11 Specialist</option>
+          </select>
+          <label for="focus-choice" data-en="Main learning focus" data-zh="主要学习方向">Main learning focus</label>
+          <select id="focus-choice" required>
+            <option value="" data-en="Select a focus" data-zh="请选择方向">Select a focus</option>
+            <option value="foundation" data-en="Build foundations" data-zh="巩固基础">Build foundations</option>
+            <option value="reasoning" data-en="Improve mathematical reasoning" data-zh="加强数学推理">Improve mathematical reasoning</option>
+            <option value="assessment" data-en="Prepare for assessments" data-zh="准备校内评估">Prepare for assessments</option>
+            <option value="pathway" data-en="Discuss subject choices" data-zh="讨论选课方向">Discuss subject choices</option>
+          </select>
+          <button class="primary" type="submit" data-en="Preview application" data-zh="预览申请">Preview application</button>
+        </form>
+        <div id="result" class="result" role="status" aria-live="polite" hidden></div>
+      </div>
+      <aside class="side-card">
+        <div class="eyebrow" data-en="Before you enrol" data-zh="报名前请了解">Before you enrol</div>
+        <h2 data-en="Classes in Mansfield" data-zh="Mansfield 上课地点">Classes in Mansfield</h2>
+        <p data-en="Our current timetable lists Saturday classes for Years 8–11. Zhiyuan Education rents the class venue at Mansfield State High School; class times may change." data-zh="当前课表列有 8–11 年级周六课程。致远教育租用 Mansfield State High School 的场地上课；时间安排可能调整。">Our current timetable lists Saturday classes for Years 8–11. Zhiyuan Education rents the class venue at Mansfield State High School; class times may change.</p>
+        <a href="../#timetable" data-en="View class timetable →" data-zh="查看课程时间表 →">View class timetable →</a>
+        <hr>
+        <p data-en="When enrolment opens, this page can be connected to an approved contact or enrolment system. Until then, no information is sent or saved." data-zh="正式开放报名后，可将此页面接入确认的联络或报名系统。目前不会发送或保存资料。">When enrolment opens, this page can be connected to an approved contact or enrolment system. Until then, no information is sent or saved.</p>
+      </aside>
+    </section>
+  </main>
+  <footer><div class="wrap"><strong>ZHIYUAN EDUCATION AUSTRALIA</strong><p data-en="Queensland mathematics coaching · Brisbane" data-zh="昆州数学辅导 · 布里斯班">Queensland mathematics coaching · Brisbane</p></div></footer>
+  <script type="module" src="./enrol.js"></script>
+</body>
+</html>

@@ -7,3 +7,5 @@ The website is static. Its files are in `dist/`. GitHub Actions publishes that f
 The event photographs and logo were supplied for this website. The site does not currently accept homework uploads or provide student accounts.
 
 The `student/` page is a fictional demonstration with browser-memory practice responses. See [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md) for checks, Workers Builds setup, quota notes and rollback steps.
+
+The `enrol/` page previews a class enquiry in English or Chinese. It collects no names or contact details, sends nothing, and does not reserve a place. See [ENROLMENT_DEMO_REPORT.md](ENROLMENT_DEMO_REPORT.md) for this addition and its verification.
