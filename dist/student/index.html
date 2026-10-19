@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A fictional student portal demonstration for Zhiyuan Education Australia. No real student data is collected.">
+  <title>Student Portal Demo | Zhiyuan Education Australia</title>
+  <link rel="stylesheet" href="./student.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Student navigation">
+      <a class="brand" href="../"><img src="../images/logo.jpg" alt="Zhiyuan Education logo"><span>致远教育<small>ZHIYUAN EDUCATION</small></span></a>
+      <div class="sidebar-label" id="nav-label">STUDENT PORTAL</div>
+      <nav id="nav" aria-label="Student portal sections"></nav>
+      <div class="sidebar-bottom"><span class="demo-dot"></span><span id="demo-side">Fictional demo · no account</span></div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="mobile-brand"><img src="../images/logo.jpg" alt=""><strong>致远教育</strong></div>
+        <div class="crumb" id="crumb">Student Portal / Dashboard</div>
+        <div class="top-actions"><span class="top-demo" id="top-demo">DEMO MODE</span><button id="language" class="language" type="button" aria-label="Switch language">中文</button></div>
+      </header>
+      <main id="content" tabindex="-1"></main>
+      <footer class="portal-footer"><span id="footer-note">This is a fictional interface. Practice responses stay in this browser tab.</span><a href="../" id="back-site">Back to website ↗</a></footer>
+    </div>
+  </div>
+</body>
+</html>
