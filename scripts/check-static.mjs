@@ -9,6 +9,9 @@ const page = read('dist/index.html');
 const portal = read('dist/student/index.html');
 const enrol = read('dist/enrol/index.html');
 const enrolScript = read('dist/enrol/enrol.js');
+const login = read('dist/student/login/index.html');
+const loginScript = read('dist/student/login/login.js');
+const loginConfig = read('dist/student/login/firebase-config.js');
 const wrangler = JSON.parse(read('wrangler.jsonc'));
 const pkg = JSON.parse(read('package.json'));
 
@@ -37,12 +40,21 @@ assert.doesNotMatch(enrolScript, /\bfetch\s*\(|\bXMLHttpRequest\b|\blocalStorage
 assert.match(portal, /\.\/student\.css/);
 assert.match(portal, /\.\.\/images\/logo\.jpg/);
 assert.equal(wrangler.assets.directory, './dist');
+assert.ok(portal.includes('href="./login/"'));
+assert.ok(login.includes('src="./login.js"'));
+assert.ok(login.includes('src="../../images/logo.jpg"'));
+assert.ok(login.includes('id="login-form" hidden'));
+for (const symbol of ['browserSessionPersistence','signInWithEmailAndPassword','sendPasswordResetEmail','onAuthStateChanged']) assert.ok(loginScript.includes(symbol));
+assert.ok(!loginScript.includes('createUserWithEmailAndPassword'));
+assert.ok(loginConfig.includes("apiKey: ''"));
+assert.ok(loginConfig.includes("authDomain: ''"));
 assert.equal(wrangler.assets.not_found_handling, '404-page');
 assert.equal(wrangler.main, undefined);
 assert.equal(pkg.devDependencies.wrangler, '4.151.1');
 
 for (const path of ['dist/404.html','dist/student/app.js','dist/student/data-source.js','dist/student/student.css',
   'dist/enrol/index.html','dist/enrol/enrol.css','dist/enrol/enrol.js',
+  'dist/student/login/index.html','dist/student/login/login.js','dist/student/login/login.css','dist/student/login/firebase-config.js',
   'dist/images/logo.jpg','dist/images/event-1.jpg','dist/images/event-2.jpg','dist/images/event-3.jpg','dist/images/event-4.jpg']) {
   assert.ok(statSync(join(fileURLToPath(root),path)).size > 0, `${path} must have content`);
 }
