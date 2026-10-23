@@ -24,6 +24,7 @@ function renderNav(active){
   document.getElementById('top-demo').textContent=t('demo');
   document.getElementById('footer-note').textContent=t('footer');
   document.getElementById('back-site').textContent=t('back');
+  document.getElementById('login-link').textContent=language==='en'?'Student sign-in':'学生登录';
   document.getElementById('language').textContent=language==='en'?'中文':'English';
   document.getElementById('crumb').textContent=`${t('portal')} / ${t(active)||t('missing')}`;
 }

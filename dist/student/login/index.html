@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student sign-in for Zhiyuan Education Australia. Account access is being prepared.">
+  <title>Student sign-in | Zhiyuan Education Australia</title>
+  <link rel="stylesheet" href="./login.css">
+  <script type="module" src="./login.js"></script>
+</head>
+<body>
+  <header class="top"><div class="wrap top-inner"><a class="brand" href="../../"><img src="../../images/logo.jpg" alt="Zhiyuan Education logo"><span>ZHIYUAN EDUCATION<small>AUSTRALIA · 致远教育</small></span></a><button id="language" type="button" aria-label="Switch language">中文</button></div></header>
+  <main class="wrap layout">
+    <div class="intro"><div class="eyebrow" data-en="Student access" data-zh="学生入口">Student access</div><h1 data-en="Sign in to your account" data-zh="登录学生账号">Sign in to your account</h1><p data-en="Account access is being prepared. The existing student portal remains a fictional demonstration; signing in does not reveal courses, grades or homework." data-zh="账号入口正在准备中。现有学生中心仍为虚构演示；登录后暂不显示课程、成绩或作业。">Account access is being prepared. The existing student portal remains a fictional demonstration; signing in does not reveal courses, grades or homework.</p><a href="../" data-en="View the student demo →" data-zh="查看学生系统演示 →">View the student demo →</a></div>
+    <section class="panel" aria-labelledby="form-title"><h2 id="form-title" data-en="Student sign-in" data-zh="学生登录">Student sign-in</h2><p class="muted" data-en="Use the email and password provided by Zhiyuan Education once accounts are enabled." data-zh="账号启用后，请使用致远教育提供的邮箱及密码。">Use the email and password provided by Zhiyuan Education once accounts are enabled.</p>
+      <div id="setup-message" class="notice" role="status" data-en="Sign-in is not enabled yet. No account details can be submitted on this page." data-zh="登录尚未启用。此页面目前无法提交账号资料。">Sign-in is not enabled yet. No account details can be submitted on this page.</div>
+      <form id="login-form" hidden><label for="email" data-en="Email address" data-zh="邮箱地址">Email address</label><input id="email" name="email" type="email" autocomplete="username" required maxlength="254"><label for="password" data-en="Password" data-zh="密码">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required><button id="submit" class="primary" type="submit" data-en="Sign in" data-zh="登录">Sign in</button><button id="reset" class="text-button" type="button" data-en="Forgot your password?" data-zh="忘记密码？">Forgot your password?</button></form>
+      <div id="account" hidden><p class="muted" data-en="Signed in as" data-zh="当前登录账号">Signed in as</p><strong id="account-email"></strong><p class="notice" data-en="Authentication is active. Private student information is not connected yet." data-zh="登录已启用。真实学生资料尚未接入。">Authentication is active. Private student information is not connected yet.</p><button id="sign-out" class="primary" type="button" data-en="Sign out" data-zh="退出登录">Sign out</button></div>
+      <p id="feedback" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="wrap footer"><span data-en="This page does not accept homework or show student records." data-zh="此页面不接收作业，也不显示学生记录。">This page does not accept homework or show student records.</span><a href="../../" data-en="Back to website" data-zh="返回网站">Back to website</a></footer>
+</body>
+</html>
